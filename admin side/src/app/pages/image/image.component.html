@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">View Images</h4>
+      </div>
+
+      <div class="card-body" *ngIf="images.length > 0">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <tr>
+                <th>Image ID</th>
+                <th>Recipe Name</th>
+                <th>Image</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let image of images">
+                <td>{{ image.id }}</td>
+                <td>{{ getRecipeName(image.recipeId) }}</td>
+                <td>
+                  <img [src]="image.base64Image" alt="Image" width="80" height="80" />
+                </td>
+                <td>
+                  <button class="btn btn-danger btn-fab btn-icon btn-round" (click)="deleteImage(image.id)">
+                    <i class="nc-icon nc-simple-remove"></i> 
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p *ngIf="images.length === 0" class="text-warning text-center mt-3">
+        No images available.
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="!isUnauthorizedPage">
+    <app-navbar *ngIf="showLayout"></app-navbar>
+    <app-sidebar *ngIf="showLayout"></app-sidebar>
+  </div>
+<router-outlet></router-outlet>
