@@ -1,5 +1,3 @@
-Generate Data With Python
-
 Project Description: Recipe Sharing Platform
 A full-featured web application for sharing, managing, and exploring cooking recipes. The platform is divided into two main roles — User and Admin — with secure authentication and role-based access control powered by Keycloak.
 
